@@ -1,0 +1,28 @@
+{
+  "name": "sql-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarrthak008/SQL-NODE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarrthak008/SQL-NODE/issues"
+  },
+  "homepage": "https://github.com/sarrthak008/SQL-NODE#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql2": "^3.14.5",
+    "nodemon": "^3.1.10"
+  }
+}
