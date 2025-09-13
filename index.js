@@ -4,11 +4,14 @@ import db from "./config/conectdb.js"
 const app = express();
 const PORT = 3000;
 
+app.use(express.json());
+app.use(express.urlencoded({extended:true}))
 // controllers...
-import { getTodos } from "./controllers/TodosCotrol.js";
+import { getTodoById, getTodos } from "./controllers/TodosCotrol.js";
 
 
 app.get('/gettodo',getTodos);
+app.get('/gettodo/:id',getTodoById)
 
 
 app.get("/health",(req,res)=>{
