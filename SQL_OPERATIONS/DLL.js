@@ -23,6 +23,19 @@ const runDDL = async (req, res) => {
             console.log('database used successfully')
         }
 
+        // insert table inot database.. insert basic user table into database 
+        
+        let isTableCreated = await connection.query(`
+             CREATE TABLE IF NOT EXISTS user(id int auto_increment primary key,name varchar(90) not null,address varchar(255) not null);
+        `)
+
+        if(isTableCreated.length == 0){
+            return res.status(400).json({data:null,message:"faild to create table"})
+        }else{
+            console.log('table created successfully')
+        }
+
+        
 
 
 
