@@ -7,5 +7,9 @@ const connection = mysql.createPool({
     database:'mydb'
 })
 
+if(connection){
+    console.log("database connected successfully")
+}
+
 
 export default connection;
